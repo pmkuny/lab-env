@@ -1,0 +1,16 @@
+Arpeggio==2.0.2
+attrs==25.3.0
+debugpy==1.8.14
+dill==0.4.0
+grpcio==1.66.2
+parver==0.5
+protobuf==4.25.8
+pulumi==3.182.0
+pulumi_aws==6.83.0
+PyYAML==6.0.2
+semver==3.0.4
+typing_extensions==4.14.1
+
+# Testing dependencies
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
