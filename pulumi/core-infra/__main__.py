@@ -1,11 +1,12 @@
 import pulumi
-import pulumi_aws as aws
 from networking import c_KubernetesNetwork
 from helper import *
 
 # Variables separated by underscore
 # Constants CAPITALIZED
 # Pulumi Components prepended by c_
+
+logger = config_logging()
 
 '''
 Dictionary Order is important for networking creation
@@ -21,6 +22,9 @@ KUBERNETES_NETWORK_CIDR= {
     "worker_plane_a": "10.0.3.0/25",
     "worker_plane_b": "10.0.4.0/25"
 }
+
+config = pulumi.Config()
+print(logger.info(f'Global Tags: {get_global_tags()}'))
 
 kubernetes_network = c_KubernetesNetwork("dev-cluster-network",KUBERNETES_NETWORK_CIDR)
 
